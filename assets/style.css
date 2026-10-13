@@ -1,0 +1,23 @@
+:root{--bg:#101114;--panel:#17191e;--line:#2a2d36;--text:#e9e7e2;--muted:#9b9da6;--accent:#d9b36a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:18px/1.7 'Source Serif 4',Georgia,serif}
+a{color:var(--accent)}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+code,pre,.mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.85rem}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:.6rem 1rem;display:flex;gap:1rem;overflow-x:auto;white-space:nowrap;z-index:5}
+nav a{color:var(--muted);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:.78rem}nav a:hover{color:var(--text)}
+main,header,footer{max-width:760px;margin:0 auto;padding:0 1.25rem}
+header{padding-top:4.5rem;padding-bottom:2rem;border-bottom:1px solid var(--line)}
+h1{font-size:clamp(2.4rem,7vw,3.8rem);line-height:1.05;margin:.3rem 0 1rem;letter-spacing:-.02em}
+.lede{font-size:1.25rem;color:var(--muted);max-width:34rem}
+.meta{color:var(--muted)}
+main{counter-reset:s}section{padding:2.5rem 0;border-bottom:1px solid var(--line);counter-increment:s}
+h2{font-size:1.8rem;margin:0 0 1rem}h2::before{content:counter(s,decimal-leading-zero);display:block;font:.8rem 'JetBrains Mono',monospace;color:var(--accent);margin-bottom:.4rem}
+h3{font-size:1.15rem;margin:1.6rem 0 .4rem}
+pre{background:var(--panel);border:1px solid var(--line);padding:1rem;overflow-x:auto;border-radius:4px}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.95rem}th,td{text-align:left;padding:.55rem .7rem;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-weight:600}
+figure{margin:1.5rem 0}img{max-width:100%;border:1px solid var(--line);border-radius:4px}figcaption{color:var(--muted);font-size:.9rem;margin-top:.4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1.2rem}.card h3{margin:0 0 .4rem}.card p{margin:.3rem 0;font-size:.95rem;color:var(--muted)}
+.card .links{margin-top:.8rem;display:flex;gap:1rem;flex-wrap:wrap;font-size:.9rem}
+footer{padding:2rem 1.25rem 4rem;color:var(--muted);font-size:.9rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

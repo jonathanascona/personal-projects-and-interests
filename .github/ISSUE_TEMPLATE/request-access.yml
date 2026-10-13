@@ -1,0 +1,17 @@
+name: Request access
+description: Ask to see private code or a walkthrough
+title: "Access request: "
+labels: [access-request]
+body:
+  - type: input
+    id: who
+    attributes: {label: Your name and company, placeholder: Jane Doe, Acme}
+    validations: {required: true}
+  - type: input
+    id: contact
+    attributes: {label: Best email to reach you}
+    validations: {required: true}
+  - type: textarea
+    id: what
+    attributes: {label: Which project and what would you like to see?}
+    validations: {required: true}
